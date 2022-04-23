@@ -1,19 +1,31 @@
-import { useEffect, useState } from "react";
+import * as React from "react";
+import { BrowserRouter, useRoutes } from "react-router-dom";
+import Login from "./Login";
+import Logout from "./Logout";
+import Home from "./Home";
+import Dashboard from "./Dashboard";
 
-function App() {
-  const [mensagem, setMensagem] = useState("");
-  const fetchData = async () => {
-    const data = await fetch("/api/mensagem");
-    const body = await data.json();
+const Routes = () => {
+  const element = useRoutes([
+    { path: "/", element: <Home /> },
+    { path: "/home", element: <Home /> },
+    { path: "/login", element: <Login /> },
+    { path: "/logout", element: <Logout /> },
+    { path: "/register", element: <h1>Register</h1> },
+    { path: "/dashboard", element: <Dashboard /> },
+    { path: "*", element: <h1>404</h1> },
+  ]);
 
-    return body;
-  };
+  return element;
+};
 
-  useEffect(() => {
-    fetchData().then((data) => setMensagem(data.express));
-  }, []);
-
-  return <div className="App">{mensagem}</div>;
-}
+interface IAuthProps {}
+const App: React.FC<IAuthProps> = (): JSX.Element => {
+  return (
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
+  );
+};
 
 export default App;
