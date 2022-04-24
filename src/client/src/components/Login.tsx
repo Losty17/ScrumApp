@@ -83,7 +83,7 @@ const Login: React.FC<ILoginProps> = (): JSX.Element => {
       direction="column"
       justifyContent="center"
       alignItems="center"
-      sx={{ height: "100vh", backgroundColor: "#e3e3e3" }}
+      sx={{ height: "100vh" }}
     >
       <Grid
         container
