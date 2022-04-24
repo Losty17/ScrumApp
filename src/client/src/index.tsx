@@ -1,9 +1,15 @@
-import { CssBaseline, createTheme, Theme, ThemeProvider } from "@mui/material";
+import {
+  CssBaseline,
+  createTheme,
+  Theme,
+  ThemeProvider,
+  responsiveFontSizes,
+} from "@mui/material";
 import React from "react";
 import * as ReactDOM from "react-dom/client";
 import App from "./components/App";
 
-export const theme: Theme = createTheme({
+let theme: Theme = createTheme({
   palette: {
     mode: "dark",
     primary: {
@@ -23,6 +29,7 @@ export const theme: Theme = createTheme({
     },
   },
 });
+theme = responsiveFontSizes(theme);
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
