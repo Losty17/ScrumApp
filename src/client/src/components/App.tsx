@@ -3,7 +3,7 @@ import { BrowserRouter, useRoutes } from "react-router-dom";
 import Login from "./Login";
 import Logout from "./Logout";
 import Home from "./Home";
-import Dashboard from "./Dashboard";
+import Dashboard from "./Dashboard/DashboardIndex";
 
 const Routes = () => {
   const element = useRoutes([
