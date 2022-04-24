@@ -2,8 +2,8 @@
   "name": "scrum-app",
   "version": "0.0.1",
   "scripts": {
-    "client": "cd client && npm start",
-    "server": "nodemon server.ts",
+    "client": "cd src && cd client && npm start",
+    "server": "cd src &&  nodemon server.ts",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "dependencies": {
