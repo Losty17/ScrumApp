@@ -42,7 +42,12 @@ const DashboardSidebar: React.FC<IDashboardSidebarProps> = ({
         <Typography variant="h5">Dashboard</Typography>
       </Toolbar>
       <Divider light />
-      <List>
+      <List
+        sx={{
+          borderRight: "1px solid rgba(232, 217, 225, 0.08)",
+          height: "100%",
+        }}
+      >
         {views.map((text, index) => (
           <ListItemButton
             id={text.toLowerCase()}
