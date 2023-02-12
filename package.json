@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "concurrently": "^3.5.0",
-    "nodemon": "^2.0.15",
+    "nodemon": "^2.0.20",
     "ts-node": "^10.7.0"
   }
 }
